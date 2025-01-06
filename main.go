@@ -11,5 +11,8 @@ func main() {
 	// Life()
 	// TableMain()
 
-	interfaces.MainTalk()
+	// interfaces.MainTalk()
+	// interfaces.MainStardate()
+	// interfaces.StrMain()
+	interfaces.Marshal()
 }
