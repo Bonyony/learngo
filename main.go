@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"learngo/interfaces"
 )
 
 func main() {
@@ -16,6 +15,8 @@ func main() {
 	// interfaces.MainTalk()
 	// interfaces.MainStardate()
 	// interfaces.StrMain()
-	interfaces.Marshaler()
+	// interfaces.Marshaler()
+
+	Animals()
 
 }
