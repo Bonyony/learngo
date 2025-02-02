@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"learngo/concstate"
 )
 
 func main() {
@@ -20,5 +19,5 @@ func main() {
 
 	Animals()
 
-	concstate.MutexMain()
+	// concstate.MutexMain()
 }

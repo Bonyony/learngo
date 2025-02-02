@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 )
 
@@ -71,10 +72,35 @@ func (w wumpkin) move() string {
 }
 
 type animal interface {
-	eat()
-	move()
+	eat() string
+	move() string
+}
+
+func step(a animal) {
+	switch rand.Intn(2) {
+	case 0:
+		fmt.Printf("%v %v.\n", a, a.move())
+	default:
+		fmt.Printf("%v eats %v.\n", a, a.eat())
+	}
 }
 
 func Animals() {
-
+	animals := []animal{
+		wumpkin{name: "Wumpus"},
+		flumphkin{name: "Flumphus"},
+		grumpkin{name: "Grumpus"},
+	}
+	count := 1
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 24; j++ {
+			if j < 6 || j > 20 {
+				fmt.Printf("The chumplings are sleeping during day %v\n", count)
+			} else {
+				a := rand.Intn(len(animals))
+				step(animals[a])
+			}
+		}
+		count += 1
+	}
 }
